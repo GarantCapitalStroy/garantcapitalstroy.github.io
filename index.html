@@ -1,30 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hy">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Գարանտ Կապիտալ Ստրոյ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Գարանտ Կապիտալ Ստրոյ</title>
+  <!-- Tailwind + Plugins via CDN for prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#005a98',
+            secondary: '#4d6072',
+            accent: '#433bff',
+          },
+        },
+      },
+      plugins: [
+        window.tailwindcss.plugins.daisyui,
+        window.tailwindcss.plugins.typography,
+      ],
+      daisyui: { themes: false },
+    }
+  </script>
+    <link rel="stylesheet" href="/colors.css">
     <link rel="stylesheet" href="/header.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+
 </head>
-<body>
-    <header>
-        <nav class="navigation-panel">
-            <div class="logo">
-                <a href="/"><img src="/images/logo3.png" alt="Logo" width="100%"></a>
-            </div>
-            <a href="#" class="toggle-button">
-                <span class="burger-bar"></span>
-                <span class="burger-bar"></span>
-                <span class="burger-bar"></span>
-            </a>
-            <ul class="nav-links" id="nav-links">
-                <a href="/home"><li><p>Գլխավոր</p></li></a>
-                <a href="/about_us"><li><p>Մեր մասին</p></li></a>
-                <a href="/search"><li><p>Երևի ասենք ուրիշ բան</p></li></a>
-                <a href="/contact_us"><li><p>Կոնտակտ Աս</p></li></a>
-            </ul>
-        </nav>
-    </header>
-    <p>Home ara</p>
+<body class="flex flex-col min-h-screen">
+  <!-- Header Component -->
+  <header class="sticky top-0 z-50 text-white shadow-lg">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img src="/images/logo3.png" alt="Logo" class="h-12 w-auto" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="/" class="hover:text-accent transition duration-200">Գլխավոր</a>
+        <a href="/about_us" class="hover:text-accent transition duration-200">Մեր մասին</a>
+        <a href="/search" class="hover:text-accent transition duration-200">Երևի ասենք ուրիշ բան</a>
+        <a href="/contact_us" class="hover:text-accent transition duration-200">Հետադարձ կապ</a>
+      </nav>
+
+      <!-- Mobile Toggle Button -->
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="nav-menu" class="hidden bg-primary md:hidden">
+      <a href="/" class="block px-6 py-3 hover:bg-secondary transition">Գլխավոր</a>
+      <a href="/about_us" class="block px-6 py-3 hover:bg-secondary transition">Մեր մասին</a>
+      <a href="/search" class="block px-6 py-3 hover:bg-secondary transition">Երևի ասենք ուրիշ բան</a>
+      <a href="/contact_us" class="block px-6 py-3 hover:bg-secondary transition">Հետադարձ կապ</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Carousel Slider -->
+  <!-- Full-Screen Carousel Slider -->
+  <section class="relative w-full h-screen overflow-hidden">
+    <div class="swiper-container h-full overflow-hidden">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide group relative h-full bg-center bg-cover overflow-hidden
+        transform transition duration-700 ease-out
+        group-hover:scale-105 group-hover:rotate-1
+        group-hover:brightness-110 group-hover:contrast-105 group-hover:hue-rotate-5"
+ style="background-image: url('/images/test.jpg'); background-size: cover;">
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/70"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/90 opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"></div>
+        <!-- Content positioned above center-left -->
+        <div class="absolute inset-0 flex flex-col justify-center items-start pl-12 lg:pl-24"
+             style="top: 30%;">
+            <h2 class="text-5xl lg:text-7xl font-extrabold text-white opacity-0 transform translate-y-8 animate-slide-in delay-100">
+                «Վարդանանց» փողոց
+            </h2>
+            <p class="mt-4 text-xl lg:text-2xl text-white opacity-0 transform translate-y-8 animate-slide-in delay-300">
+                Ամբողջական Բարեկարգման Աշխատանքներ
+            </p>
+            <!-- Call-to-action as decorative element; full-slide link handles click -->
+            <a href="/projects/project1" style="z-index: 100;"><span class="accent-bgcolor mt-8 inline-block text-lg font-semibold uppercase tracking-wide bg-opacity-20 py-3 px-6 opacity-0 group-hover:opacity-100 transition-colors transition-opacity duration-700">
+                Ավելին
+            </span></a>
+          </div>
+          <!-- Hover Transform & Filter -->
+        <div class="absolute inset-0 transition-transform transition-filter duration-700"
+        style="transform-origin: center;"
+        
+        onmouseenter="this.parentNode.classList.add('hover-active')"
+        onmouseleave="this.parentNode.classList.remove('hover-active')"
+   ></div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="swiper-slide group relative h-full bg-center bg-cover overflow-hidden
+        transform transition duration-700 ease-out
+        group-hover:scale-105 group-hover:rotate-1
+        group-hover:brightness-110 group-hover:contrast-105 group-hover:hue-rotate-5"
+ style="background-image: url('/images/test2.jpg'); background-size: cover;">
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/70"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/90 opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"></div>
+        <!-- Content positioned above center-left -->
+        <div class="absolute inset-0 flex flex-col justify-center items-start pl-12 lg:pl-24"
+             style="top: 30%;">
+            <h2 class="text-5xl lg:text-7xl font-extrabold text-white opacity-0 transform translate-y-8 animate-slide-in delay-100">
+                «Նարեկ» քաղաքի ջրագիծ
+            </h2>
+            <p class="mt-4 text-xl lg:text-2xl text-white opacity-0 transform translate-y-8 animate-slide-in delay-300">
+                Ջրագծերի Տեղադրում և Ամրապնդում
+            </p>
+            <!-- Call-to-action as decorative element; full-slide link handles click -->
+            <a href="/projects/project1" style="z-index: 100;"><span class="accent-bgcolor mt-8 inline-block text-lg font-semibold uppercase tracking-wide bg-opacity-20 py-3 px-6 opacity-0 group-hover:opacity-100 transition-colors transition-opacity duration-700">
+                Ավելին
+            </span></a>
+          </div>
+          <!-- Hover Transform & Filter -->
+        <div class="absolute inset-0 transition-transform transition-filter duration-700"
+        style="transform-origin: center;"
+        
+        onmouseenter="this.parentNode.classList.add('hover-active')"
+        onmouseleave="this.parentNode.classList.remove('hover-active')"
+   ></div>
+        </div>
+        <!-- Add more slides similarly... -->
+      </div>
+      <!-- Controls -->
+    <div class="swiper-button-prev text-white z-20 hover:text-accent transition-opacity duration-500"></div>
+    <div class="swiper-button-next text-white z-20 hover:text-accent transition-opacity duration-500"></div>
+      <div class="swiper-pagination z-20"></div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="bg-secondary text-white">
+    <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Column 1: About -->
+      <div>
+        <h4 class="font-bold mb-4">Մեր մասին</h4>
+        <p class="text-sm">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam error maxime quibusdam corporis accusamus esse magnam unde, quam libero dolores consequuntur! Cum pariatur dicta dignissimos accusantium quas voluptatem asperiores facere!
+        </p>
+      </div>
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h4 class="font-bold mb-4">Աղբյուրներ</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="hover:text-accent transition">Գլխավոր</a></li>
+          <li><a href="/about_us" class="hover:text-accent transition">Մեր մասին</a></li>
+          <li><a href="/projects" class="hover:text-accent transition">Ծրագիրներ</a></li>
+          <li><a href="/contact_us" class="hover:text-accent transition">Կապ մեզ հետ</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: Contact -->
+      <div>
+        <h4 class="font-bold mb-4">Կապի տվյալներ</h4>
+        <p class="text-sm">Հեռախոս: +374 10 123456</p>
+        <p class="text-sm">Email: info@garantcapital.am</p>
+        <div class="mt-4 flex space-x-4">
+          <!-- Example social icons -->
+          <a href="#" class="hover:text-accent transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><!-- … --></svg>
+          </a>
+          <a href="#" class="hover:text-accent transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><!-- … --></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary text-center text-xs py-4">
+      &copy; 2025 Գարանտ Կապիտալ Ստրոյ: Բոլոր իրավունքները պաշտպանված են:
+    </div>
+  </footer>
+
+  <!-- Optional Script for Toggle -->
+  <script>
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 0,
+      depth: 200,
+      modifier: 1,
+      slideShadows: true,
+    },
+    speed: 1500,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    spaceBetween: 60,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    autoplay: { delay: 5000, disableOnInteraction: false },
+  });
+</script>
 </body>
 </html>
