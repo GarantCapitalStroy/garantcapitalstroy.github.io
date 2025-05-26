@@ -1,0 +1,13 @@
+.why-us-feature {
+    transition: all 1s ease;
+    background-color: rgb(188, 232, 255);
+}
+
+.why-us-feature:hover {
+    scale: 1.13;
+}
+
+.why-us-feature:hover .hover-par-highlight {
+    background-image: url('/images/highlight.png');
+    background-size: contain;
+}
