@@ -148,7 +148,8 @@
 
 
   <!-- Infographic Section -->
-    <section class="bg-gray-300 py-16">
+    <section id="dynamic_gradient" class="bg-gray-300 py-16 dynamic-gradient">
+        <div class="blob"></div>
         <!-- <div class="container text-center">
             <h1></h1>
         </div> -->
@@ -199,7 +200,7 @@
   
         <!-- Feature 01 -->
         <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
-          <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">01</span></div>
+          <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 2% 10% 2% 8%;" class="hover-par-highlight">01</span></div>
           <!-- Skewed Title Bar -->
           <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
             <span class="relative px-2">Մասնագիտացված Անձնակազմ</span>
@@ -332,5 +333,54 @@
     autoplay: { delay: 5000, disableOnInteraction: false },
   });
 </script>
+
+<!-- <script>
+    const card = document.getElementById('dynamic_gradient');
+  
+    card.addEventListener('mousemove', (e) => {
+      // Get bounding box & compute relative coords
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;  // x position within element
+      const y = e.clientY - rect.top;   // y position within element
+  
+      // Compute the angle relative to the center (optional pivot)
+      const cx = rect.width  / 2;
+      const cy = rect.height / 2;
+      const dx = x - cx;
+      const dy = y - cy;
+  
+      // atan2 gives radians; convert to degrees
+      let deg = Math.atan2(dy, dx) * (180 / Math.PI);
+  
+      // shift so that 0° is pointing up (optional)
+      deg = deg + 90;
+  
+      // normalize to [0, 360)
+      if (deg < 0) deg += 360;
+  
+      // Update the CSS variable
+      card.style.setProperty('--grad-angle', `${deg}deg`);
+      console.log(deg);
+    });
+  
+    // (Optional) Reset on mouse leave
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--grad-angle', '135deg');
+    });
+  </script> -->
+
+  <script>
+    const card = document.getElementById('dynamic_gradient');
+card.addEventListener('mousemove', e => {
+  const rect = card.getBoundingClientRect();
+  // pointer coords relative to card
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  // push into CSS vars
+  card.style.setProperty('--blob-x', `${x}px`);
+  card.style.setProperty('--blob-y', `${y}px`);
+});
+
+  </script>
 </body>
 </html>

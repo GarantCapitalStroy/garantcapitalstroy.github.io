@@ -1,13 +1,105 @@
 .why-us-feature {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     background-color: rgb(188, 232, 255);
+}
+
+.why-us-feature::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        160deg, 
+        rgb(188, 232, 255) 0%, 
+        rgb(188, 232, 255) 60%, 
+        var(--accent) 100%
+    );
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: -1;
+    border-radius: 0.5rem;
+}
+
+.why-us-feature:hover::before {
+    opacity: 1;
 }
 
 .why-us-feature:hover {
     scale: 1.13;
 }
 
-.why-us-feature:hover .hover-par-highlight {
-    background-image: url('/images/highlight.png');
-    background-size: contain;
+.why-us-feature .hover-par-highlight {
+    position: relative;
+    z-index: 10;
 }
+
+.why-us-feature .hover-par-highlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--accent);
+    mask: url('/images/brushstroke.svg') no-repeat center / contain;
+    -webkit-mask: url('/images/brushstroke.svg') no-repeat center / contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.why-us-feature:hover .hover-par-highlight::before {
+    opacity: 0.7;
+}
+
+.why-us-feature:hover .hover-par-highlight {
+    z-index: 10;
+    /* background-image: url('/images/brushstroke.svg');
+    background-size: contain; */
+    /* color: var(--accent); */
+}
+
+.dynamic-gradient {
+    position: relative;
+    overflow: hidden;
+    --blob-x: 0px;
+    --blob-y: 0px;
+}
+
+.blob {
+    position: absolute;
+    top: 0; left: 0;
+  
+    /* small solid centre */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 195, 0, 0.5);
+
+    pointer-events: none;
+    /* center the blob on the pointer, via CSS vars */
+    transform: translate(
+      calc(var(--blob-x) - 100px),
+      calc(var(--blob-y) - 100px)
+    );
+    filter: blur(120px);
+    /* smooth out the motion and fade in/out */
+    transition: transform 0.1s ease-out,
+                opacity   0.2s ease-out;
+    opacity: 0;
+}
+
+.dynamic-gradient:hover .blob {
+    opacity: 1;
+}
+
+/* .dynamic-gradient::before {
+    content: "";
+    inset: 0;
+
+    background: linear-gradient(
+        var(--grad-angle),
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.5) 40%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    position: absolute;
+    overflow: hidden;
+} */
