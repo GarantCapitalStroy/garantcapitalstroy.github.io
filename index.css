@@ -103,3 +103,8 @@
     position: absolute;
     overflow: hidden;
 } */
+
+.pipe-bg {
+    background-image: url("/images/pipe_background.png");
+    background-size: contain;
+}
