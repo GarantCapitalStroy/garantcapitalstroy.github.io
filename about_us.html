@@ -1,30 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hy">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Մեր Մասին</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ծրագրեր։ Գարանտ Կապիտալ Ստրոյ</title>
+  <!-- Tailwind + Plugins via CDN for prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#005a98',
+            secondary: '#4d6072',
+            accent: '#433bff',
+          },
+        },
+      },
+      plugins: [
+        window.tailwindcss.plugins.daisyui,
+        window.tailwindcss.plugins.typography,
+      ],
+      daisyui: { themes: false },
+    }
+  </script>
+    <link rel="stylesheet" href="/colors.css">
     <link rel="stylesheet" href="/header.css">
 </head>
-<body>
-    <header>
-        <nav class="navigation-panel">
-            <div class="logo">
-                <a href="/"><img src="/images/logo3.png" alt="Logo" width="100%"></a>
-            </div>
-            <a href="#" class="toggle-button">
-                <span class="burger-bar"></span>
-                <span class="burger-bar"></span>
-                <span class="burger-bar"></span>
-            </a>
-            <ul class="nav-links" id="nav-links">
-                <a href="/"><li><p>Գլխավոր</p></li></a>
-                <a href="/about_us"><li><p>Մեր մասին</p></li></a>
-                <a href="/search"><li><p>Երևի ասենք ուրիշ բան</p></li></a>
-                <a href="/contact_us"><li><p>Կոնտակտ Աս</p></li></a>
-            </ul>
-        </nav>
-    </header>
-    <p>About us ara</p>
+<body class="flex flex-col min-h-screen">
+  <!-- Header Component -->
+  <header class="sticky top-0 z-50 text-white shadow-lg">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img src="/images/logo3.png" alt="Logo" class="h-12 w-auto" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="/" class="hover:text-accent transition duration-200">Գլխավոր</a>
+        <a href="/about_us" class="hover:text-accent transition duration-200">Մեր մասին</a>
+        <a href="/projects" class="hover:text-accent transition duration-200">Ծրագրեր</a>
+        <a href="/contact_us" class="hover:text-accent transition duration-200">Հետադարձ կապ</a>
+      </nav>
+
+      <!-- Mobile Toggle Button -->
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="nav-menu" class="hidden bg-primary md:hidden">
+      <a href="/" class="block px-6 py-3 hover:bg-secondary transition">Գլխավոր</a>
+      <a href="/about_us" class="block px-6 py-3 hover:bg-secondary transition">Մեր մասին</a>
+      <a href="/projects" class="block px-6 py-3 hover:bg-secondary transition">Ծրագրեր</a>
+      <a href="/contact_us" class="block px-6 py-3 hover:bg-secondary transition">Հետադարձ կապ</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <section class="container mx-auto px-6 text-center bg-[url('/images/pale_wide_bg2.png')] bg-cover bg-no-repeat py-36">
+      <h2 class="text-6xl font-bold mb-8 text-[var(--primary)]">Մեր Մասին</h2>
+    </section>
+    <!-- Here, I need a section talking about our company -->
+      <!-- Company Story -->
+  <section class="container mx-auto px-20 py-20 space-y-16 bg-[#FFFEF3]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Text -->
+      <div class="space-y-6">
+        <h3 class="text-4xl font-bold">
+          <span class="text-[var(--primary)]">Մեր Պատմությունը</span>
+        </h3>
+        <p class="text-gray-700 leading-relaxed">
+          «Գարանտ Կապիտալ Ստրոյ» հիմնադրվել է 2005 թվականին՝ մի փոքր թիմով, որի նպատակն էր բերել արևմտյան որակյալ տեխնոլոգիաներ Հայաստանի ենթակառուցվածքային շինարարությանը:
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          20 տարվա ընթացքում մենք հանգուցալուծեցինք հարյուրավոր ճանապարհներ և ջրագիծ նախագծեր, մշտապես պահպանելով նորարարության և կայունության սկզբունքները:
+        </p>
+        <a href="/about_us#history" class="inline-block mt-4 px-6 py-2 rounded-full bg-[var(--primary)] text-white font-semibold shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          Մանրամասն
+        </a>
+      </div>
+      <!-- Image -->
+      <div class="relative overflow-hidden rounded-xl shadow-lg group">
+        <img src="/images/test5.jpg" alt="Մեր պատմությունը" class="w-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section id="history" class="container mx-auto px-20 py-20 bg-[#FFFEF3] rounded-2xl">
+    <h3 class="text-4xl font-bold text-center mb-12">
+      <span class="text-[var(--primary)]">Մեր Սկզբունքները</span>
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Value Card -->
+      <div class="group p-6 bg-[--b] rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+        <h4 class="font-semibold mb-2">Ուժեղ Դիմացկունություն</h4>
+        <p class="text-sm text-gray-600 leading-snug">
+          Խնդրի լուծման ժամանակ չենք խուսափում բարդ հողով, պարբերաբար բարձր պահանջներ ենք դնում դիզայնի և շինարարության վրա։
+        </p>
+      </div>
+      <!-- Value Card -->
+      <div class="group p-6 bg-[--b] rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+        <h4 class="font-semibold mb-2">Հաղորդակցություն</h4>
+        <p class="text-sm text-gray-600 leading-snug">
+          Խնդրի բոլոր փուլերում հաճախորդների հետ բաց հարաբերություններ՝ թափանցիկեցում ենք ծախսերն ու ժամկետները։
+        </p>
+      </div>
+      <!-- Value Card -->
+      <div class="group p-6 bg-[--b] rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+        <h4 class="font-semibold mb-2">Ավտոմատացում</h4>
+        <p class="text-sm text-gray-600 leading-snug">
+          Նորագույն սարքավորումներ և մոնիթորինգ՝ շինարարության որակի և արագության օպտիմալացման համար։
+        </p>
+      </div>
+      <!-- Value Card -->
+      <div class="group p-6 bg-[--b] rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+        <h4 class="font-semibold mb-2">Շրջակա Միջավայր</h4>
+        <p class="text-sm text-gray-600 leading-snug">
+          Կայուն զարգացման տեսլական՝ վերամշակման և կանաչ տարածքների ինտեգրմամբ յուրաքանչյուր նախագծում։
+        </p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+
+  <footer class="bg-secondary text-white">
+    <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Column 1: About -->
+      <div>
+        <h4 class="font-bold mb-4">Մեր մասին</h4>
+        <p class="text-sm">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam error maxime quibusdam corporis accusamus esse magnam unde, quam libero dolores consequuntur! Cum pariatur dicta dignissimos accusantium quas voluptatem asperiores facere!
+        </p>
+      </div>
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h4 class="font-bold mb-4">Աղբյուրներ</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="hover:text-accent transition">Գլխավոր</a></li>
+          <li><a href="/about_us" class="hover:text-accent transition">Մեր մասին</a></li>
+          <li><a href="/projects" class="hover:text-accent transition">Ծրագրեր</a></li>
+          <li><a href="/contact_us" class="hover:text-accent transition">Հետադարձ Կապ</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: Contact -->
+      <div>
+        <h4 class="font-bold mb-4">Կապ</h4>
+        <p class="text-sm">Հեռախոս: +374 10 123456</p>
+        <p class="text-sm">Էլ․ Հասցե: info@garantcapital.am</p>
+        <div class="mt-4 flex space-x-4">
+          <!-- Example social icons -->
+          <a href="#" class="hover:text-accent transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><!-- … --></svg>
+          </a>
+          <a href="#" class="hover:text-accent transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><!-- … --></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary text-center text-xs py-4">
+      &copy; 2025 Գարանտ Կապիտալ Ստրոյ: Բոլոր իրավունքները պաշտպանված են:
+    </div>
+  </footer>
+
+  <!-- Optional Script for Toggle -->
+  <script>
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
