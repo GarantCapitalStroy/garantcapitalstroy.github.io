@@ -50,5 +50,5 @@ footer {
 .delay-500 { animation-delay: 0.5s; }
 
 .accent-bgcolor {
-    background-color: var(--accent);
+    background-color: var(--primary);
 }
