@@ -86,7 +86,7 @@
 }
 
 .dynamic-gradient:hover .blob {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 /* .dynamic-gradient::before {
