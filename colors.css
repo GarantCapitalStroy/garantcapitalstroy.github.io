@@ -2,6 +2,7 @@ html {
     --text: black;
     --primary: #005a98;
     --secondary: #4d6072;
-    --accent: #ffc300;
-    --b: #e8e8d3;
+    --accent: #bce8ff;
+    --accent-dark: rgb(133, 212, 255);
+    --b: #bce8ff;
 }

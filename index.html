@@ -34,23 +34,20 @@
 
 </head>
 <body class="flex flex-col min-h-screen">
-  <!-- Header Component -->
   <header class="sticky top-0 z-50 text-white shadow-lg">
     <div class="container mx-auto flex items-center justify-between px-6 py-4">
-      <!-- Logo -->
       <a href="/" class="flex items-center">
         <img src="/images/logo3.png" alt="Logo" class="h-12 w-auto" />
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex space-x-8">
-        <a href="/" class="transition duration-200">Գլխավոր</a>
+      <nav class="hidden md:flex space-x-12">
         <a href="/about_us" class="transition duration-200">Մեր մասին</a>
         <a href="/projects" class="transition duration-200">Ծրագրեր</a>
+        <a href="/gallery" class="transition duration-200">Տեխնիկաներ</a>
+        <a href="/gallery" class="transition duration-200">Նկարներ</a>
         <a href="/contact_us" class="transition duration-200">Հետադարձ կապ</a>
       </nav>
 
-      <!-- Mobile Toggle Button -->
       <button id="nav-toggle" class="md:hidden focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -58,7 +55,6 @@
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="nav-menu" class="hidden bg-primary md:hidden text-right">
       <a href="/" class="block px-6 py-3 hover:bg-secondary transition">Գլխավոր</a>
       <a href="/about_us" class="block px-6 py-3 hover:bg-secondary transition">Մեր մասին</a>
@@ -202,7 +198,7 @@
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 2% 10% 2% 8%;" class="hover-par-highlight">1</span></div>
             <!-- Skewed Title Bar -->
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
-              <span class="relative px-2">Մասնագիտացված Անձնակազմ</span>
+              <span class="relative px-2">Մասնագիտացված անձնակազմ</span>
             </h3>
             <p class="text-gray-600">Մեր փորձառու մասնագետները տասնամյակների համակցված փորձ են բերում յուրաքանչյուր նախագծի՝ ապահովելով բարձրակարգ որակ և նորարարություն:</p>
           </div>
@@ -211,25 +207,25 @@
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">2</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
-              <span class="relative px-2">Sustainable Solutions</span>
+              <span class="relative px-2">Որակյալ աշխատանք</span>
             </h3>
-            <p class="text-gray-600">We prioritize eco-friendly methods and materials, reducing environmental impact while delivering durable, cost-effective results.</p>
+            <p class="text-gray-600">Գիտակցելով որակի կարևորությունը՝ մեր անձնակազմը չի խնայում ջանք ու եռանդ՝ հենց Ձեր ծրագիրը ամենաբարձր մակարդակով իրագործելու հարցում։</p>
           </div>
     
           <!-- Feature 03 -->
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">3</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
-              <span class="relative px-2">On-Time Delivery</span>
+              <span class="relative px-2">Ժամկետների պահպանման երաշխիք</span>
             </h3>
-            <p class="text-gray-600">Ծրագրի խիստ կառավարման և թափանցիկ հաղորդակցության շնորհիվ մենք երաշխավորում ենք, որ ծրագիրը կընթանա ըստ ժամանակացույցի:</p>
+            <p class="text-gray-600">Ծրագրի մասնագիտացված կառավարման և թափանցիկ հաղորդակցության շնորհիվ մենք երաշխավորում ենք, որ ծրագիրը կընթանա ըստ ժամանակացույցի:</p>
           </div>
     
           <!-- Feature 04 -->
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">4</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
-              <span class="relative px-2">Բացառիկ Ուշադրություն Հաճախորդներին</span>
+              <span class="relative px-2">Բացառիկ ուշադրություն հաճախորդներին</span>
             </h3>
             <p class="text-gray-600">Ձեր գոհունակությունը մեր առաջնահերթությունն է: Մենք հարմարեցնում ենք մեր մոտեցումը ձեր յուրօրինակ կարիքներին՝ ամեն քայլափոխի ձեզ տեղյակ պահելով:</p>
           </div>
@@ -239,9 +235,9 @@
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">5</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
               <span class="absolute inset-0 bg-accent transform -skew-x-12 -z-10"></span>
-              <span class="relative px-2">Cutting-Edge Tech</span>
+              <span class="relative px-2">Ժամանակակից տեխնիկա</span>
             </h3>
-            <p class="text-gray-600">We leverage the latest tools and techniques—like BIM, advanced analytics, and drone surveys—to optimize every phase of your build.</p>
+            <p class="text-gray-600">Բոլոր ծրագրերն իրականացվում են մեր՝ միջազգային ստանդարտներին համապատասխանող շինարարական տեխնիկաների օգնությամբ, լիցենզավորված մասնագետների կողմից։</p>
           </div>
 
           <!-- Feature 06 -->
@@ -249,9 +245,9 @@
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">6</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
               <span class="absolute inset-0 bg-accent transform -skew-x-12 -z-10"></span>
-              <span class="relative px-2">Proven Track Record</span>
+              <span class="relative px-2">Տարիների Փորձ</span>
             </h3>
-            <p class="text-gray-600">Hundreds of successful projects and thousands of satisfied clients speak to our reliability and excellence.</p>
+            <p class="text-gray-600">Տասնյակ հաջողված նախագծերը և հազարավոր գոհ քաղաքացիները մեր որակի և հուսալիության գրավականն են։</p>
           </div>
     
         </div>
