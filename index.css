@@ -52,7 +52,7 @@
     z-index: 10;
     /* background-image: url('/images/brushstroke.svg');
     background-size: contain; */
-    /* color: var(--accent); */
+    
 }
 
 .dynamic-gradient {
@@ -66,20 +66,20 @@
     position: absolute;
     top: 0; left: 0;
   
-    /* small solid centre */
+    
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background: rgba(255, 195, 0, 0.5);
 
     pointer-events: none;
-    /* center the blob on the pointer, via CSS vars */
+    
     transform: translate(
       calc(var(--blob-x) - 100px),
       calc(var(--blob-y) - 100px)
     );
     filter: blur(120px);
-    /* smooth out the motion and fade in/out */
+    
     transition: transform 0.1s ease-out,
                 opacity   0.2s ease-out;
     opacity: 0;
@@ -142,10 +142,11 @@
 
 
 .hero-container {
+    --hero-header-container-width: 100vw;
     background: 
         url("images/Masis2.png") left bottom / cover no-repeat;
-    height: 90vh;
 }
+
 
 @keyframes revealFromTop {
     to {
@@ -163,7 +164,7 @@
     background-size:     100% 100%;
     position: absolute;
     top: 60%;
-    right: calc(100vw - 600px);
+    right: calc(100vw - 350px);
     bottom: 0;
     left: 0;
     pointer-events: none;
@@ -183,12 +184,9 @@
 .hero-container .hero-header-container {
     display: flex;
     justify-content: center;
-    align-items: end;
     position: absolute;
     padding: 30px 30px 60px 30px;
-    --hero-header-container-width: 60vw;
     width: var(--hero-header-container-width);
-    right: 0;
     top: 0;
     bottom: 0;
 }
@@ -203,7 +201,7 @@
 }
 
 .hero-container .hero-header {
-    font-size: 6vw;
+    font-size: 3rem;
     color: var(--accent);
     text-align: center;
     text-wrap: nowrap;
@@ -213,6 +211,17 @@
     text-shadow: 
         3px 3px 0 var(--primary), 
         6px 6px 0 black;
+}
+
+@media (min-width: 768px) {
+    .hero-container .hero-header {
+        font-size: 6vw;
+    }
+
+    .hero-container::after {
+        top: 60%;
+        right: calc(100vw - 600px);
+    }
 }
 
 .hero-container .hero-header span {

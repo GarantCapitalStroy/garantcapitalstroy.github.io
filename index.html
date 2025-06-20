@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Գլխավոր։ Գարանտ Կապիտալ Ստրոյ</title>
-  <!-- Tailwind + Plugins via CDN for prototyping -->
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -38,7 +38,7 @@
 </head>
 <body class="flex flex-col min-h-screen">
   <header class="sticky top-0 z-50 text-white shadow-lg">
-    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+    <div class="container mx-auto flex items-center justify-between md:px-6 py-4">
       <a href="/" class="flex items-center">
         <img src="/images/logo3.png" alt="Logo" class="h-12 w-auto" />
       </a>
@@ -66,43 +66,43 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  
   <main class="flex-grow">
-    <section class="relative w-full hero-container overflow-hidden">
-      <div class="hero-header-container">
+    <section class="relative w-full h-[40vh] md:h-[90vh] hero-container overflow-hidden">
+      <div class="hero-header-container [align-items:begin] md:[align-items:end] md:[right:0] md:[--hero-header-container-width:60vw]">
         <p id="hero-header-text" class="hero-header noto-sans-armenian-bold">
-          Բարեխիղճ աշխատանքը<br>երաշխավորում է որակ
+          Բարեխիղճ աշխատանքը<br>որակի երաշխիքն է
         </p>
       </div>
     </section>
-    <!-- Carousel Slider -->
+
   <section class="relative w-full h-[50vh] md:h-screen overflow-hidden">
     <div class="swiper-container h-full overflow-hidden">
       <div class="swiper-wrapper">
-        <!-- Slide 2 -->
+        
         <div class="swiper-slide group relative h-full bg-center bg-cover overflow-hidden
         transform transition duration-700 ease-out
         group-hover:scale-105 group-hover:rotate-1
         group-hover:brightness-110 group-hover:contrast-105 group-hover:hue-rotate-5"
  style="background-image: url('/images/project2/cover.jpg'); background-size: cover;">
-        <!-- Gradient Overlay -->
+        
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/70"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/90 opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"></div>
-        <!-- Content positioned above center-left -->
+        
         <div class="absolute inset-0 flex flex-col justify-center items-start pl-12 lg:pl-24"
              style="top: 30%;">
-            <h2 class="text-3xl md:text-7xl font-extrabold text-white opacity-0 transform translate-y-8 animate-slide-in delay-100">
+            <h2 class="text-3xl md:text-7xl font-extrabold text-white opacity-0 transform translate-y-8 animate-slide-in delay-100 [padding-right:20vw]">
                 Արտաշատի մարզադահլիճ
             </h2>
             <p class="mt-4 text-xl md:text-2xl text-white opacity-0 transform translate-y-8 animate-slide-in delay-300">
                 Ջրագծերի Տեղադրում և Ամրապնդում
             </p>
-            <!-- Call-to-action as decorative element; full-slide link handles click -->
+            
             <a href="/projects/project2" style="z-index: 100;"><span class="accent-bgcolor mt-8 inline-block text-lg font-semibold uppercase tracking-wide bg-opacity-20 py-3 px-6 opacity-0 group-hover:opacity-100 transition-[transform,opacity] duration-[200ms,500ms] text-white [border-radius:7px] hover:translate-x-1 hover:-translate-y-1">
                 Ավելին
             </span></a>
           </div>
-          <!-- Hover Transform & Filter -->
+          
         <div class="absolute inset-0 transition-transform transition-filter duration-700"
         style="transform-origin: center;"
         
@@ -111,30 +111,62 @@
    ></div>
         </div>
   
-        <!-- Slide 3 -->
+        
         <div class="swiper-slide group relative h-full bg-center bg-cover overflow-hidden
         transform transition duration-700 ease-out
         group-hover:scale-105 group-hover:rotate-1
         group-hover:brightness-110 group-hover:contrast-105 group-hover:hue-rotate-5"
  style="background-image: url('/images/project3/cover.jpg'); background-size: cover;">
-        <!-- Gradient Overlay -->
+        
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/70"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/90 opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"></div>
-        <!-- Content positioned above center-left -->
+        
         <div class="absolute inset-0 flex flex-col justify-center items-start pl-12 lg:pl-24"
              style="top: 30%;">
-            <h2 class="text-3xl md:text-7xl font-extrabold text-white opacity-0 transform translate-y-8 animate-slide-in delay-100">
-                Մասիս բնակավայրի զբոսայգու հիմնանորոգում
+            <h2 class="text-3xl md:text-7xl font-extrabold text-white opacity-0 transform translate-y-8 animate-slide-in delay-100 [padding-right:20vw]">
+                Գյուղամիջյան զբոսայգու հիմնանորոգում
             </h2>
             <p class="mt-4 text-xl md:text-2xl text-white opacity-0 transform translate-y-8 animate-slide-in delay-300">
-                Գյուղամիջյան զբոսայգու կառուցապատում
+                «Մասիս» բնակավայր
             </p>
-            <!-- Call-to-action as decorative element; full-slide link handles click -->
+            
             <a href="/projects/project3" style="z-index: 100;"><span class="accent-bgcolor mt-8 inline-block text-lg font-semibold uppercase tracking-wide bg-opacity-20 py-3 px-6 opacity-0 group-hover:opacity-100 transition-[transform,opacity] duration-[200ms,500ms] text-white [border-radius:7px] hover:translate-x-1 hover:-translate-y-1">
                 Ավելին
             </span></a>
           </div>
-          <!-- Hover Transform & Filter -->
+          
+        <div class="absolute inset-0 transition-transform transition-filter duration-700"
+        style="transform-origin: center;"
+        
+        onmouseenter="this.parentNode.classList.add('hover-active')"
+        onmouseleave="this.parentNode.classList.remove('hover-active')"
+   ></div>
+        </div>
+
+
+        <div class="swiper-slide group relative h-full bg-center bg-cover overflow-hidden
+        transform transition duration-700 ease-out
+        group-hover:scale-105 group-hover:rotate-1
+        group-hover:brightness-110 group-hover:contrast-105 group-hover:hue-rotate-5"
+ style="background-image: url('/images/project4/cover.jpg'); background-size: cover;">
+        
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/70"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/90 opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"></div>
+        
+        <div class="absolute inset-0 flex flex-col justify-center items-start pl-12 lg:pl-24"
+          style="top: 30%;">
+          <h2 class="text-3xl md:text-7xl font-extrabold text-white opacity-0 transform translate-y-8 animate-slide-in delay-100 [padding-right:20vw]">
+              Ոռոգման համակարգի հիմնանորոգում
+          </h2>
+          <p class="mt-4 text-xl md:text-2xl text-white opacity-0 transform translate-y-8 animate-slide-in delay-300">
+              «Նոր Կյանք» բնակավայր
+          </p>
+          
+          <a href="/projects/project4" style="z-index: 100;"><span class="accent-bgcolor mt-8 inline-block text-lg font-semibold uppercase tracking-wide bg-opacity-20 py-3 px-6 opacity-0 group-hover:opacity-100 transition-[transform,opacity] duration-[200ms,500ms] text-white [border-radius:7px] hover:translate-x-1 hover:-translate-y-1">
+              Ավելին
+          </span></a>
+        </div>
+
         <div class="absolute inset-0 transition-transform transition-filter duration-700"
         style="transform-origin: center;"
         
@@ -143,7 +175,7 @@
    ></div>
         </div>
       </div>
-      <!-- Controls -->
+      
     <div class="swiper-button-prev text-white z-20 hover:text-accent transition-opacity duration-500"></div>
     <div class="swiper-button-next text-white z-20 hover:text-accent transition-opacity duration-500"></div>
       <div class="swiper-pagination z-20"></div>
@@ -153,7 +185,7 @@
 
   <div id="dynamic_gradient" class="bg-gray-300 dynamic-gradient">
     <div class="blob"></div>
-    <!-- Infographic Section -->
+    
       <section class="py-16">
           <!-- <div class="container text-center">
               <h1></h1>
@@ -161,7 +193,7 @@
       <div class="container mx-auto px-6 text-center">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-12">
           
-          <!-- Projects Completed -->
+          
           <div class="flex flex-col items-center space-y-4 animate-slide-in">
               <svg xmlns="http://www.w3.org/2000/svg"  style="color: var(--primary)" class="h-12 w-12 text-accent" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                   <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
@@ -172,7 +204,7 @@
             <p style="color: var(--secondary)" class="text-lg font-medium text-secondary">Ավարտած Ծրագրեր</p>
           </div>
           
-          <!-- People Impacted -->
+          
           <div class="flex flex-col items-center space-y-4 animate-slide-in delay-200">
             <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--primary)" class="h-12 w-12 text-accent" fill="currentColor" viewBox="0 0 24 24" fill="currentColor" class="size-6">
               <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
@@ -182,7 +214,7 @@
             <p style="color: var(--secondary)" class="text-lg font-medium text-secondary">Քաղաքացու Կյանքի Բարելավում</p>
           </div>
           
-          <!-- Employees -->
+          
           <div class="flex flex-col items-center space-y-4 animate-slide-in delay-400">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="color: var(--primary)" class="h-12 w-12 text-accent" fill="currentColor" class="size-6">
                   <path d="M19.006 3.705a.75.75 0 1 0-.512-1.41L6 6.838V3a.75.75 0 0 0-.75-.75h-1.5A.75.75 0 0 0 3 3v4.93l-1.006.365a.75.75 0 0 0 .512 1.41l16.5-6Z" />
@@ -197,23 +229,23 @@
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
+    
     <section class="py-20 bg-gray-100">
       <div class="container mx-auto px-12 md:px-20 text-center">
         <h2 class="text-4xl font-extrabold mb-12 text-[var(--secondary)]">Ինչո՞ւ Ընտրել Մեզ</h2>
         <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
     
-          <!-- Feature 01 -->
+          
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 2% 10% 2% 8%;" class="hover-par-highlight">1</span></div>
-            <!-- Skewed Title Bar -->
+            
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
               <span class="relative px-2">Մասնագիտացված անձնակազմ</span>
             </h3>
             <p class="text-gray-600">Մեր փորձառու մասնագետները տասնամյակների համակցված փորձ են բերում յուրաքանչյուր նախագծի՝ ապահովելով բարձրակարգ որակ և նորարարություն:</p>
           </div>
     
-          <!-- Feature 02 -->
+          
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">2</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
@@ -222,7 +254,7 @@
             <p class="text-gray-600">Գիտակցելով որակի կարևորությունը՝ մեր անձնակազմը չի խնայում ջանք ու եռանդ՝ հենց Ձեր ծրագիրը ամենաբարձր մակարդակով իրագործելու հարցում։</p>
           </div>
     
-          <!-- Feature 03 -->
+          
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">3</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
@@ -231,7 +263,7 @@
             <p class="text-gray-600">Ծրագրի մասնագիտացված կառավարման և թափանցիկ հաղորդակցության շնորհիվ մենք երաշխավորում ենք, որ ծրագիրը կընթանա ըստ ժամանակացույցի:</p>
           </div>
     
-          <!-- Feature 04 -->
+          
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">4</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
@@ -240,7 +272,7 @@
             <p class="text-gray-600">Ձեր գոհունակությունը մեր առաջնահերթությունն է: Մենք հարմարեցնում ենք մեր մոտեցումը ձեր յուրօրինակ կարիքներին՝ ամեն քայլափոխի ձեզ տեղյակ պահելով:</p>
           </div>
     
-          <!-- Feature 05 -->
+          
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">5</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
@@ -250,7 +282,7 @@
             <p class="text-gray-600">Բոլոր ծրագրերն իրականացվում են մեր՝ միջազգային ստանդարտներին համապատասխանող շինարարական տեխնիկաների օգնությամբ, լիցենզավորված մասնագետների կողմից։</p>
           </div>
 
-          <!-- Feature 06 -->
+          
           <div class="why-us-feature relative p-6 border border-gray-200 rounded-lg hover:shadow-xl">
             <div class="text-6xl font-extrabold text-[var(--primary)] mb-4"><span style="padding: 10%;" class="hover-par-highlight">6</span></div>
             <h3 style="color: var(--primary)" class="inline-block text-2xl font-bold mb-3 relative">
@@ -264,12 +296,12 @@
       </div>
     </section>
   </div>
-  <!-- Message from Our Founder -->
+  
 <section style="background-image: url('/images/modern_background.png'); background-size: cover;" class="py-20 text-white">
     <div class="container mx-auto px-6 md:px-12 lg:px-20">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
         
-        <!-- Founder Image & Name -->
+        
         <div class="flex flex-col items-start md:items-end justify-end text-center md:text-left space-y-4">
           <img 
             src="/images/founder.jpg" 
@@ -281,19 +313,19 @@
               Հիմնադիր Տնօրեն
             </span>
           </h3>
-          <p class="text-lg font-semibold text-secondary">Նարեկ Թրամփ</p>
+          <p class="text-lg font-semibold text-secondary">Նարեկ Բաղդասարյան</p>
         </div>
   
-        <!-- Quote -->
+        
         <div class="relative md:col-start-2 md:col-span-2">
-          <!-- Decorative Quote Mark -->
+          
           <span class="absolute -top-6 left-6 text-6xl text-[var(--accent)] opacity-30">
             <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--accent); scale: 2;" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
           </span>
           <blockquote class="relative pl-12 border-l-4 border-[var(--accent)] italic text-xl">
             «Գարանտ Կապիտալ Ստրոյ»-ում մեր տեղադրած յուրաքանչյուր խողովակ և մեր կառուցած յուրաքանչյուր ճանապարհ արտացոլում է որակ, անվտանգություն, և հավատարմություն այն համայնքներին, որոնց մենք ծառայում ենք: Մեր տեսլականն է տրամադրել ենթակառուցվածք, որը կդիմանա ժամանակի փորձությանը և կբարելավի յուրաքանչյուր բնակչի կյանքը:
           </blockquote>
-          <!-- Attribution underline -->
+          
           <div class="mt-6 h-1 w-16 bg-[var(--accent)] rounded-full"></div>
         </div>
   
@@ -306,14 +338,14 @@
 
   <footer class="bg-secondary text-white">
     <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Column 1: About -->
+      
       <div>
         <h4 class="font-bold mb-4">Մեր մասին</h4>
         <p class="text-sm">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam error maxime quibusdam corporis accusamus esse magnam unde, quam libero dolores consequuntur! Cum pariatur dicta dignissimos accusantium quas voluptatem asperiores facere!
         </p>
       </div>
-      <!-- Column 2: Quick Links -->
+      
       <div>
         <h4 class="font-bold mb-4">Աղբյուրներ</h4>
         <ul class="space-y-2 text-sm">
@@ -323,18 +355,18 @@
           <li><a href="/contact_us" class="hover:text-accent transition">Հետադարձ Կապ</a></li>
         </ul>
       </div>
-      <!-- Column 3: Contact -->
+      
       <div>
         <h4 class="font-bold mb-4">Կապ</h4>
-        <p class="text-sm">Հեռախոս: +374 10 123456</p>
-        <p class="text-sm">Էլ․ Հասցե: info@garantcapital.am</p>
+        <p class="text-sm">Հեռախոս: +374 77 222 877</p>
+        <p class="text-sm">Էլ․ Հասցե: info@garantcapitalstroy.am</p>
         <div class="mt-4 flex space-x-4">
-          <!-- Example social icons -->
+          
           <a href="#" class="hover:text-accent transition">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><!-- … --></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"></svg>
           </a>
           <a href="#" class="hover:text-accent transition">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><!-- … --></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"></svg>
           </a>
         </div>
       </div>
@@ -344,14 +376,14 @@
     </div>
   </footer>
 
-  <!-- Optional Script for Toggle -->
+  
   <script>
     const btn = document.getElementById('nav-toggle');
     const menu = document.getElementById('nav-menu');
     btn.addEventListener('click', () => menu.classList.toggle('hidden'));
   </script>
 
-  <!-- Swiper JS -->
+  
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.swiper-container', {

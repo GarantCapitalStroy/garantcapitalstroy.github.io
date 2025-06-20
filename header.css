@@ -1,23 +1,23 @@
 @font-face {
     font-family: "vrdznagir";
-    /* check locally first (optional) */
+    
     src: local("vrdznagir"),
         url("/fonts/Vrdznagir.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
-    /* optional performance tweaks: */
-    font-display: swap;  /* render text immediately, swap in font when ready */
+    
+    font-display: swap;  
 }
 
 @font-face {
     font-family: "dzeragir";
-    /* check locally first (optional) */
+    
     src: local("dzeragir"),
         url("/fonts/Dzeragir.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
-    /* optional performance tweaks: */
-    font-display: swap;  /* render text immediately, swap in font when ready */
+    
+    font-display: swap;  
 }
 
 
@@ -28,10 +28,16 @@ header {
         var(--primary) 100%
         );
     color: white;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
-/* Base nav link styling */
+@media (min-width: 768px) {
+    header {
+        padding: 0 10%;
+    }
+}
+
+
 header nav a {
     position: relative;
     display: inline-block;
@@ -40,7 +46,7 @@ header nav a {
     cursor: pointer;
 }
 
-/* Create the hidden underline */
+
 header nav a::after {
     content: '';
     position: absolute;
