@@ -50,11 +50,56 @@
       </button>
     </div>
 
-    <div id="nav-menu" class="hidden bg-primary md:hidden text-right">
-      <a href="/" class="block px-6 py-3 hover:bg-secondary transition">Գլխավոր</a>
-      <a href="/about_us" class="block px-6 py-3 hover:bg-secondary transition">Մեր մասին</a>
-      <a href="/projects" class="block px-6 py-3 hover:bg-secondary transition">Ծրագրեր</a>
-      <a href="/contact_us" class="block px-6 py-3 hover:bg-secondary transition">Հետադարձ կապ</a>
+    <div id="nav-overlay"
+        class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm hidden z-40"></div>
+
+    <div id="nav-menu"
+        class="fixed top-0 right-0 h-full w-2/3 max-w-xs
+                bg-gradient-to-b from-[var(--primary)] to-[var(--accent)]
+                shadow-2xl transform translate-x-full
+                transition-transform duration-300 z-50
+                flex flex-col p-6 rounded-l-2xl">
+      <button id="nav-close"
+              class="self-end mb-8 p-2 rounded-full bg-white/20 hover:bg-white/30 text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+          <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <nav class="flex-1 space-y-4">
+        <a href="/"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Գլխավոր
+        </a>
+        <a href="/about_us"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Մեր մասին
+        </a>
+        <a href="/projects"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Ծրագրեր
+        </a>
+        <a href="/equipment"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Տեխնիկաներ
+        </a>
+        <a href="/contact_us"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Հետադարձ կապ
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -248,9 +293,25 @@
 
   
   <script>
-    const btn = document.getElementById('nav-toggle');
-    const menu = document.getElementById('nav-menu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    const btn     = document.getElementById('nav-toggle');
+    const menu    = document.getElementById('nav-menu');
+    const overlay = document.getElementById('nav-overlay');
+    const close   = document.getElementById('nav-close');
+
+    function openMenu() {
+      menu.classList.remove('translate-x-full');
+      overlay.classList.remove('hidden');
+    }
+    function closeMenu() {
+      menu.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+    }
+
+    btn.addEventListener('click', () =>
+      menu.classList.contains('translate-x-full') ? openMenu() : closeMenu()
+    );
+    overlay.addEventListener('click', closeMenu);
+    close.addEventListener('click', closeMenu);
   </script>
 </body>
 </html>
