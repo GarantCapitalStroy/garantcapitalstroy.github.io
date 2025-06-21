@@ -24,7 +24,6 @@
 header {
     background: linear-gradient(90deg, 
         white -10%, 
-        var(--primary) 50%,
         var(--primary) 100%
         );
     color: white;
@@ -34,6 +33,11 @@ header {
 @media (min-width: 768px) {
     header {
         padding: 0 10%;
+        background: linear-gradient(90deg, 
+            white -10%, 
+            var(--primary) 50%,
+            var(--primary) 100%
+            );
     }
 }
 
