@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ծրագրեր։ Գարանտ Կապիտալ Ստրոյ</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#005a98',
+            secondary: '#4d6072',
+            accent: '#433bff',
+          },
+        },
+      },
+      plugins: [
+        window.tailwindcss.plugins.daisyui,
+        window.tailwindcss.plugins.typography,
+      ],
+      daisyui: { themes: false },
+    }
+  </script>
+    <link rel="stylesheet" href="/colors.css">
+    <link rel="stylesheet" href="/header.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  
+  <header class="sticky top-0 z-50 text-white shadow-lg">
+    <div class="container mx-auto flex items-center justify-between md:px-6 py-4">
+      <a href="/" class="flex items-center">
+        <img src="/images/logo3.png" alt="Logo" class="h-12 w-auto" />
+      </a>
+
+      <nav class="hidden md:flex space-x-12">
+        <a href="/" class="transition duration-200">Գլխավոր</a>
+        <a href="/about_us" class="transition duration-200">Մեր մասին</a>
+        <a href="/projects" class="transition duration-200">Ծրագրեր</a>
+        <a href="/equipment" class="transition duration-200">Տեխնիկաներ</a>
+        <a href="/contact_us" class="transition duration-200">Հետադարձ կապ</a>
+      </nav>
+
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="nav-overlay"
+        class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm hidden z-40"></div>
+
+    <div id="nav-menu"
+        class="fixed top-0 right-0 h-full w-2/3 max-w-xs
+                bg-gradient-to-b from-[var(--primary)] to-[var(--accent)]
+                shadow-2xl transform translate-x-full
+                transition-transform duration-300 z-50
+                flex flex-col p-6 rounded-l-2xl">
+      <button id="nav-close"
+              class="self-end mb-8 p-2 rounded-full bg-white/20 hover:bg-white/30 text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+          <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <nav class="flex-1 space-y-4">
+        <a href="/"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Գլխավոր
+        </a>
+        <a href="/about_us"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Մեր մասին
+        </a>
+        <a href="/projects"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Ծրագրեր
+        </a>
+        <a href="/equipment"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Տեխնիկաներ
+        </a>
+        <a href="/contact_us"
+          class="block px-4 py-3 rounded-lg text-white font-medium
+                  bg-white/10 hover:bg-white/20 transition">
+          Հետադարձ կապ
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main class="flex-grow">
+    <section class="container mx-auto px-6 text-center bg-[url('/images/pale_wide_bg2.png')] bg-cover bg-no-repeat py-36 [background-position:bottom]">
+      <h2 class="text-6xl font-bold mb-8 text-[var(--primary)]">Տեխնիկաներ</h2>
+    </section>
+    
+    <section class="container grid grid-cols-1 md:grid-cols-2 gap-16 items-start mx-auto px-6 md:px-20 pt-8 pb-20 bg-[#FFFEF3]">
+      <!-- FIRST -->
+      <div class="group grid grid-cols-1 gap-8 items-center overflow-hidden">
+        
+        <div class="space-y-4 border-l-4 border-[var(--primary)] pl-6 transition-transform duration-500 group-hover:translate-x-2">
+          <h3 class="text-3xl font-bold relative inline-block before:block before:absolute before:-bottom-3 before:left-0 before:w-0 before:h-1 before:bg-[var(--primary)] before:transition-all before:duration-500 group-hover:before:w-full">
+            Ինքնաթափ բեռնատար <br><span class="text-[var(--primary)]">SHACMAN X3000 6X4</span>
+          </h3>
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="/images/equipment/equipment1.jpg" alt=""
+               class="w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+      </div>
+    
+      <!-- SECOND -->
+      <div class="group grid grid-cols-1 gap-8 items-center overflow-hidden">
+        <div class="space-y-4 border-l-4 border-[var(--primary)] pl-6 transition-transform duration-500 group-hover:translate-x-2">
+          <h3 class="text-3xl font-bold relative inline-block before:block before:absolute before:-bottom-3 before:left-0 before:w-0 before:h-1 before:bg-[var(--primary)] before:transition-all before:duration-500 group-hover:before:w-full">
+            Pickup մեքենա<br>  <span class="text-[var(--primary)]">Nissan Frontier</span>
+          </h3>
+        </div>
+        
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="/images/equipment/equipment2.jpg" alt=""
+               class="w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  
+
+
+  <footer class="bg-secondary text-white">
+    <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div>
+        <h4 class="font-bold mb-4">Մեր մասին</h4>
+        <p class="text-sm">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam error maxime quibusdam corporis accusamus esse magnam unde, quam libero dolores consequuntur! Cum pariatur dicta dignissimos accusantium quas voluptatem asperiores facere!
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="font-bold mb-4">Աղբյուրներ</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="hover:text-accent transition">Գլխավոր</a></li>
+          <li><a href="/about_us" class="hover:text-accent transition">Մեր մասին</a></li>
+          <li><a href="/projects" class="hover:text-accent transition">Ծրագրեր</a></li>
+          <li><a href="/contact_us" class="hover:text-accent transition">Հետադարձ Կապ</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="font-bold mb-4">Կապ</h4>
+        <p class="text-sm">Հեռախոս: +374 77 222 877</p>
+        <p class="text-sm">Էլ․ Հասցե: info@garantcapitalstroy.am</p>
+        <div class="mt-4 flex space-x-4">
+          
+          <a href="#" class="hover:text-accent transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"></svg>
+          </a>
+          <a href="#" class="hover:text-accent transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary text-center text-xs py-4">
+      &copy; 2025 Գարանտ Կապիտալ Ստրոյ: Բոլոր իրավունքները պաշտպանված են:
+    </div>
+  </footer>
+
+  
+  <script>
+    const btn     = document.getElementById('nav-toggle');
+    const menu    = document.getElementById('nav-menu');
+    const overlay = document.getElementById('nav-overlay');
+    const close   = document.getElementById('nav-close');
+
+    function openMenu() {
+      menu.classList.remove('translate-x-full');
+      overlay.classList.remove('hidden');
+    }
+    function closeMenu() {
+      menu.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+    }
+
+    btn.addEventListener('click', () =>
+      menu.classList.contains('translate-x-full') ? openMenu() : closeMenu()
+    );
+    overlay.addEventListener('click', closeMenu);
+    close.addEventListener('click', closeMenu);
+  </script>
+</body>
+</html>
