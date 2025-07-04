@@ -68,7 +68,8 @@ header nav a:hover::after {
 }
 
 footer {
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    background: linear-gradient(90deg, var(--primary), var(--primary));
+    padding: 0 5%;
 }
 
 @keyframes slideIn {
